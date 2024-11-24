@@ -16,6 +16,16 @@ export class DashboardComponent implements OnInit {
   cards = [
     { title: 'Card 1', content: 'This is content for Card 1' },
     { title: 'Card 2', content: 'This is content for Card 2' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+        { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
+    { title: 'Card 3', content: 'This is content for Card 3' },
     { title: 'Card 3', content: 'This is content for Card 3' }
   ];
 

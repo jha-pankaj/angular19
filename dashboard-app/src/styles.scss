@@ -1,4 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; padding:0;overflow: hidden; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.default-theme{
+    color: #222b45;
+    font-family: Open Sans, sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    background: #edf1f7;
+
+}
+
+.scrollable::-webkit-scrollbar {
+   // width: .3125rem;
+   // height: .3125rem;
+}
+
+ .scrollable::-webkit-scrollbar-corner {
+    background: #f7f9fc;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background: #e4e9f2;
+    cursor: pointer;
+    border-radius: .15625rem;
+}
+ .scrollable::-webkit-scrollbar-track {
+    background: #f7f9fc;
+}

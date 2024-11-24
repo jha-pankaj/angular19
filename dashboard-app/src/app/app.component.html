@@ -1,12 +1,19 @@
-<div class="main-container">
+<div class="main-container scrollable">
+  <div class="layout">
   <app-header></app-header>
 
   <div class="main-body">
     <div class="menu-sidebar">
-      <app-sidebar></app-sidebar>
+      <div class="sidebar-main">
+      <div class="menu-scroll scrollable">
+        <app-sidebar></app-sidebar>
+      </div>
+    </div>
+     
     </div>
     <div class="content">
       <router-outlet></router-outlet>
     </div>
   </div>
+</div>
 </div>
