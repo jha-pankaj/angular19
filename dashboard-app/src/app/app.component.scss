@@ -1,0 +1,40 @@
+.main-container{
+  display: block;
+  overflow: auto;
+    height: 100vh;
+    color: #222b45;
+    font-family: Open Sans, sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    .main-body{
+      padding-top: 4.75rem;
+      min-height: 100vh;
+      display: flex;
+    flex: 1;
+    -ms-flex: 1 1 auto;
+    flex-direction: row;
+    .menu-sidebar{
+      width: 16rem;
+      background-color: #fff;
+    box-shadow: 0 .5rem 1rem #2c33491a;
+    color: #222b45;
+    font-family: Open Sans, sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: calc(100vh - 4.75rem);
+    }
+    .content{
+      display: flex;
+    flex: 1;
+    -ms-flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    }
+
+    }
+}
