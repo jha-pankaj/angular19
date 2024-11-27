@@ -14,7 +14,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit  {
   initApp =false;
-   constructor(authService : AuthService){
+   constructor(){
 
 
 

@@ -5,8 +5,12 @@ import { inject } from '@angular/core';
 export const authGuard: CanActivateFn =   (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const authService = inject(AuthService);
   const router = inject(Router);
-  console.log("authService.isLoggedIn()",authService.isLoginAuthenticated())
-  if (authService.isLoginAuthenticated()) {
+  if (typeof window !== 'undefined') {
+  const json = localStorage.getItem('dashboard_user');
+  console.log("json",json)
+  }
+  console.log("authService.isLoggedIn()",authService.isLoggedIn())
+  if (authService.isLoggedIn()) {
     return true;
   }
   else {
@@ -14,5 +18,6 @@ export const authGuard: CanActivateFn =   (route: ActivatedRouteSnapshot, state:
     
     return false;
    
-  }
+  
+}
 };

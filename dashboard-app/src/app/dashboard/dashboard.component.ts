@@ -1,35 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSelectModule } from '@angular/material/select';
-import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from "../header/header.component";
+import { SidebarComponent } from "../sidebar/sidebar.component";
+import { Route, RouterOutlet } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  imports: [CommonModule,MatCardModule, MatSidenavModule,MatSelectModule,MatListModule,MatToolbarModule]
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
+  imports: [CommonModule,RouterOutlet,MatCardModule,HeaderComponent, SidebarComponent,
+    ]
 })
-export class Home implements OnInit {
-  cards = [
-    { title: 'Card 1', content: 'This is content for Card 1' },
-    { title: 'Card 2', content: 'This is content for Card 2' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-        { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' }
-  ];
-
+export class DashboardComponent implements OnInit {
+  menuOpen= signal<Boolean>(true);
   constructor() {}
-
+  onHeaderItemClicked(item:string){
+   this.menuOpen.set(!(this.menuOpen()))
+  }
   ngOnInit(): void {}
 }

@@ -27,7 +27,8 @@ export class AuthService {
   ) {
     this.getUserInfo();
     effect(() => {});
-    console.log("init of AuthService")
+    this.getUserInfo();
+    console.log("init of AuthService",this.user())
   }
   getUserInfo() {
     
@@ -56,6 +57,6 @@ export class AuthService {
   logout() {
     localStorage.removeItem(USER_KEY);
     this.#userSignal.set(null);
-    this.router.navigateByUrl("/login");
+    //this.router.navigateByUrl("/login");
   }
 }
