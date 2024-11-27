@@ -1,19 +1,26 @@
-<div class="main-container scrollable">
+<!--<div class="main-container scrollable">
   <div class="layout">
-  <app-header></app-header>
+    <app-header (onHeaderItemClicked)="onHeaderItemClicked($event)" ></app-header>
 
-  <div class="main-body">
-    <div class="menu-sidebar">
-      <div class="sidebar-main">
-      <div class="menu-scroll scrollable">
-        <app-sidebar></app-sidebar>
+    <div class="main-body">
+      @if(menuOpen()){
+      <div class="menu-sidebar" [ngClass]="{ 'sidebar-fixed': isPhone$ | async }">
+        <div class="sidebar-main">
+          <div class="menu-scroll scrollable">
+            <app-sidebar></app-sidebar>
+          </div>
+        </div>
+      </div>
+    }
+      <div class="content">
+        <router-outlet></router-outlet>
       </div>
     </div>
-     
-    </div>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
   </div>
-</div>
-</div>
+</div> -->
+@if(initApp){
+
+}
+<router-outlet></router-outlet>
+
+

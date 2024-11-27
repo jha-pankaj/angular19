@@ -1,0 +1,19 @@
+  <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-semibold text-center text-gray-700 mb-6">Login</h2>
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <mat-form-field class="w-full mb-4">
+          <mat-label>Email</mat-label>
+          <input matInput type="email"  name="email" required formControlName="email" class="p-2 border rounded-md w-full" placeholder="Enter your email" />
+        </mat-form-field>
+  
+        <mat-form-field class="w-full mb-6">
+          <mat-label>Password</mat-label>
+          <input matInput type="password"  name="password" required  formControlName="password" class="p-2 border rounded-md w-full" placeholder="Enter your password" />
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" class="w-full py-2" >Login</button>
+      </form>
+    </div>
+  </div>
+  

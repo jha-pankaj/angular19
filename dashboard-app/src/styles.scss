@@ -1,10 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html, body { height: 100%; }
-body { margin: 0; padding:0;overflow: hidden; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; padding:0;overflow: hidden; 
+     }
+
+html body {
+    font-family: 'Playfair Display', serif  Roboto, "Helvetica Neue", sans-serif !important
+}
 .default-theme{
     color: #222b45;
-    font-family: Open Sans, sans-serif;
+    font-family: 'Playfair Display', serif  Roboto, "Helvetica Neue", sans-serif !important;
     font-size: .9375rem;
     font-weight: 400;
     background: #edf1f7;
@@ -12,8 +21,8 @@ body { margin: 0; padding:0;overflow: hidden; font-family: Roboto, "Helvetica Ne
 }
 
 .scrollable::-webkit-scrollbar {
-   // width: .3125rem;
-   // height: .3125rem;
+    width: .3125rem;
+    height: .3125rem;
 }
 
  .scrollable::-webkit-scrollbar-corner {

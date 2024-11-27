@@ -1,0 +1,17 @@
+@if(isBrowser()){
+
+<div class="grid lg:grid-cols-2 lg:gap-3 sm:gap-1">
+  <div echarts [options]="chartOption" class="chart"></div>
+  <div echarts [options]="chartOption3" class="chart"></div>
+
+  <div echarts class="lg:col-span-4 gap-1 chart" [options]="chartOption1"></div>
+  <div echarts [options]="chartOption" class="chart"></div>
+  <div
+    class="lg:col-span-4 sm:col-span-1 chart"
+    echarts
+    [options]="chartOption2"
+  ></div>
+  
+</div>
+
+}

@@ -1,3 +1,32 @@
 <div class="header-main fixed">
- <nav></nav>
+ <nav>
+    <div class="header-container">
+        <div class="menu-icon" (click)="onHeaderItemClick($event)"><mat-icon>reorder-rounded</mat-icon></div>
+        <div class="header-title"><span> <img src="./../../assets/logo.png" 
+            ></span><span>Angular 19 Experiments</span></div>
+    </div>
+    <div class="header-right-container">
+        <div class="email-holder">
+            <span><mat-icon>mail_outline</mat-icon></span>
+            <span class="email">pankajyourjha&#64;gmail.com</span>
+        </div>
+         <div class="avtar-holder">
+            <img src="./../../assets/avtar.jpg"  
+        class="rounded-full"> <span>Pankaj Jha</span>
+         </div>
+        <div>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                   <span>Logout</span>
+                </button>
+                    <button mat-menu-item>
+                     <span>About</span>
+                </button>
+              </mat-menu>
+        </div>
+    </div>
+ </nav>
 </div>
