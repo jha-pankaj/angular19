@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/login/login.component.scss"],
-  "sourcesContent": ["\r\n\r\n\r\n\r\n\r\n.login-form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding: 0 20px 20px 20px;\r\n    color: #000;\r\n    border: 1px solid #2086fc;\r\n    border-radius: 10px;\r\n  }\r\n  \r\n  .login {\r\n    max-width: 400px;\r\n    margin: 0 auto;\r\n    padding-top: 100px;\r\n  }"],
-  "mappings": "AAKA,CAAA,WACI,QAAA,KACA,eAAA,OAFJ,QAGI,EAAA,KAAA,KACA,MAAA,KACA,OAAA,IAAA,MAAA,QALJ,cAMI,KAGF,CAAA,MACE,UAAA,MAVJ,OAWI,EAAA,KACA,YAAA",
-  "names": []
-}

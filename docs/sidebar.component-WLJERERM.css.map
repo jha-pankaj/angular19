@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/sidebar/sidebar.component.scss"],
-  "sourcesContent": [".menu-items {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style-type: none;\r\n  overflow: hidden;\r\n  transition: opacity 3s ease;\r\n  .menu-item {\r\n    border-bottom: 1px solid #edf1f7;\r\n    font-size: 0.9375rem;\r\n    font-weight: 400;\r\n    line-height: 1.25rem;\r\n    &first-child {\r\n      border-top: none;\r\n    }\r\n    a {\r\n      color: #222b45;\r\n      border-radius: 0;\r\n      font-weight: 600;\r\n      line-height: 1.5rem;\r\n      display: flex;\r\n      text-decoration: none;\r\n      align-items: center;\r\n      border-color: transparent;\r\n      justify-content: space-between;\r\n    border-style: solid;\r\n    border-width: 0;\r\n    padding: .75rem 0rem;\r\n    .arrow{\r\n      width:18px;\r\n      height:18px;\r\n    }\r\n    }\r\n  }\r\n}\r\n"],
-  "mappings": "AAAA,CAAA,WAAA,OACE,EADF,QAEE,EACA,gBAAA,KACA,SAAA,OACA,WAAA,QAAA,GAAA,KACA,CANF,WAME,CAAA,UACE,cAAA,IAAA,MAAA,QACA,UAAA,SACA,YAAA,IACA,YAAA,QACA,CAXJ,WAWI,CAAA,qBACE,WAAA,KAEF,CAdJ,WAcI,CARF,UAQE,EACE,MAAA,QAfN,cAgBM,EACA,YAAA,IACA,YAAA,OACA,QAAA,KACA,gBAAA,KACA,YAAA,OACA,aAAA,YACA,gBAAA,cACF,aAAA,MACA,aAAA,EAzBJ,QA0BI,OAAA,KACA,CA3BJ,WA2BI,CArBF,UAqBE,EAAA,CAAA,MACE,MAAA,KACA,OAAA",
-  "names": []
-}
