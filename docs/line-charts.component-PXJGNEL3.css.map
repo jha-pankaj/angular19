@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/line-charts/line-charts.component.scss"],
+  "sourcesContent": [".chart{\r\n  \r\n    box-shadow: 0 0.5rem 1rem #2c33491a;\r\n    background-color: #fff;\r\n    height: 320px;\r\n}"],
+  "mappings": "AAAA,CAAA,MAEI,WAAA,EAAA,MAAA,KAAA,UACA,iBAAA,KACA,OAAA",
+  "names": []
+}
