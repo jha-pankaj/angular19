@@ -11,9 +11,20 @@ export class SidebarService {
    loadMenuItems(){
     return [
       {
+        title: "Cricket",
+        icons: '',
+        expanded: 1,
+        subMenu:[
+          {
+            title: "Updates",
+            icons: '',
+            expanded: 0,
+          }]
+        },
+      {
         title: "Charts",
         icons: '',
-        expanded: 0,
+        expanded: 1,
         subMenu:[
           {
             title: "Pi chart",
@@ -45,7 +56,7 @@ export class SidebarService {
       {
         title: "Tiles",
         icons: '',
-        expanded: 0,
+        expanded: 1,
         subMenu:[
           {
             title: "Tiles 1",
@@ -62,7 +73,7 @@ export class SidebarService {
       {
         title: "Ag Grids",
         icons: '',
-        expanded: 0,
+        expanded: 1,
         subMenu:[
           {
             title: "Flat Grid",

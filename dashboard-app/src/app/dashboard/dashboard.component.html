@@ -4,7 +4,7 @@
 
     <div class="main-body">
       @if(menuOpen()){
-      <div class="menu-sidebar">
+      <div class="menu-sidebar"  [ngClass]="{'menu-fixed': responsiveService.isMobile()}">
         <div class="sidebar-main">
           <div class="menu-scroll scrollable">
             <app-sidebar></app-sidebar>
@@ -13,8 +13,7 @@
       </div>
     }
       <div class="content">
-        <p>Content will come here</p>
-        <router-outlet></router-outlet>
+         <router-outlet></router-outlet>
       </div>
     </div>
   </div>

@@ -4,6 +4,11 @@
   list-style-type: none;
   overflow: hidden;
   transition: opacity 3s ease;
+  .sub-menu{
+    font-size: 0.85rem !important;
+    font-weight: 400;
+    padding-left:10px;
+  }
   .menu-item {
     border-bottom: 1px solid #edf1f7;
     font-size: 0.9375rem;

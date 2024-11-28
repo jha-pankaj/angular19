@@ -7,42 +7,19 @@
         @if(item.expanded){
         <mat-icon class="arrow">expand_more</mat-icon>
         } @else {
-          <mat-icon class="arrow">expand_less</mat-icon>
+        <mat-icon class="arrow">expand_less</mat-icon>
         }
       </span>
     </a>
     @if(item.expanded && item.subMenu){
-        <ul class="menu-items" @fade>
-            @for( sumItem of item.subMenu; track sumItem ){
-                <li class="menu-item">
-                    <a (click)="itemClick(sumItem)">{{sumItem.title}}</a>
-                  </li>
-            }
-         </ul>   
-
-
+    <ul class="menu-items" @fade>
+      @for( sumItem of item.subMenu; track sumItem ){
+      <li class="menu-item sub-menu">
+        <a (click)="itemClick(sumItem)">{{ sumItem.title }}</a>
+      </li>
+      }
+    </ul>
     }
   </li>
-
   }
-  </ul>
-<!--
-  <li class="menu-item">
-    <a
-      ><span>Charts</span>
-      <span>
-        <mat-icon>expand_more</mat-icon>
-        <mat-icon>expand_less</mat-icon>
-      </span></a
-    >
-
-    <ul class="menu-items">
-      <li class="menu-item">
-        <a>Chart 1</a>
-      </li>
-      <li class="menu-item">
-        <a>Chart 2</a>
-      </li>
-    </ul>
-  </li>
-</ul> -->
+</ul>

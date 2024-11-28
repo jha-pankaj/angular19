@@ -55,8 +55,6 @@
         display: flex
     ;
         justify-content: end;
-        /* padding: 1rem; */
-        margin: 1rem;
         .email-holder{
           display: flex;
          
@@ -76,5 +74,8 @@
 
       }
     
+  }
+  .mobile-header{
+    font-size: .9rem;
   }
 }

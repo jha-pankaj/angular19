@@ -18,6 +18,14 @@
       flex: 1;
       -ms-flex: 1 1 auto;
       flex-direction: row;
+      .menu-fixed{
+        position: fixed;
+    height: 100%;
+    z-index: 999;
+        bottom: 0;
+    left: 0;
+    top: 4.75rem;
+      }
       .menu-sidebar {
         width: 16rem;
         background-color: #fff;
@@ -49,7 +57,7 @@
         -ms-flex: 1 1 auto;
         flex-direction: column;
         min-width: 0;
-        padding: 2.25rem 2.25rem 0.75rem;
+        padding:0.75rem;
       }
     }
   }

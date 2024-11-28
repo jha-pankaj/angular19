@@ -1,0 +1,277 @@
+<div class="crick-header">
+  <mat-tab-group dynamicHeight (selectedTabChange)="onTabClick($event)"
+  mat-stretch-tabs="false"
+  mat-align-tabs="start"
+  animationDuration="0ms"
+>
+  <mat-tab label="Live">
+    <div class="example-button-row">
+      <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='international'}" 
+      (click)="onMatchTypeClick('International')">International</button>
+     <button mat-button 
+     [ngClass]="{'btn-highlight': this.matchType()=='domestic'}"  (click)="onMatchTypeClick('Domestic')">Domestic</button>
+     <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='League'}" (click)="onMatchTypeClick('League')" >League</button>
+     <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='women'}"  (click)="onMatchTypeClick('Women')">Women</button>
+     <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='all'}" (click)="onMatchTypeClick('All')">All</button>
+ 
+    </div>
+  </mat-tab>
+  <mat-tab label="Upcoming">
+    <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='international'}" 
+     (click)="onMatchTypeClick('International')">International</button>
+    <button mat-button 
+    [ngClass]="{'btn-highlight': this.matchType()=='domestic'}"  (click)="onMatchTypeClick('Domestic')">Domestic</button>
+    <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='League'}" (click)="onMatchTypeClick('League')" >League</button>
+    <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='women'}"  (click)="onMatchTypeClick('Women')">Women</button>
+    <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='all'}" (click)="onMatchTypeClick('All')">All</button>
+  </mat-tab>
+  <mat-tab label="Recent">
+    <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='international'}" 
+    (click)="onMatchTypeClick('International')">International</button>
+   <button mat-button 
+   [ngClass]="{'btn-highlight': this.matchType()=='domestic'}"  (click)="onMatchTypeClick('Domestic')">Domestic</button>
+   <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='League'}" (click)="onMatchTypeClick('League')" >League</button>
+   <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='women'}"  (click)="onMatchTypeClick('Women')">Women</button>
+   <button mat-button [ngClass]="{'btn-highlight': this.matchType()=='all'}" (click)="onMatchTypeClick('All')">All</button>
+
+  </mat-tab>
+ 
+</mat-tab-group>
+</div>
+
+<div class="crick-cards">
+
+@if(this.matchType()=='international' || this.matchType()=='all'){
+
+<div class="grid lg:grid-cols-3 lg:gap-3 md:grid-cols-2 md:gap-2 sm:gap-3">
+  @for( matchs of international(); track matchs ){ @for( match of
+  matchs.matches; track match ){
+  <div class="score-card">
+    <div class="series-title-holder">
+      <div class="series-title ellipsis">{{ matchs.seriesName }}</div>
+      <div class="match-type">{{ match.matchInfo.matchFormat }}</div>
+    </div>
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team1?.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team1Score?.inngs1?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs1?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs1?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs1?.overs }})</span>
+      </div>
+      } @if(match.matchScore?.team1Score?.inngs2?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs2?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs2?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs2?.overs }})</span>
+      </div>
+      }
+    </div>
+
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team2.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team2Score?.inngs1?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs1?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs1?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs1?.overs }})</span>
+        </div>
+        } @if(match.matchScore?.team2Score?.inngs2?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs2?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs2?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs2?.overs }})</span>
+        </div>
+        }
+
+  
+    </div>
+    <!-- <span>Start Time</span
+    ><span>{{ match.matchInfo.startDate | date : "fullDate" }}</span>-->
+    <div class="match-status">{{ match.matchInfo.status }}</div>
+  </div>
+  } }
+</div>
+}
+@if(this.matchType()=='domestic' || this.matchType()=='all'){
+<div class="grid lg:grid-cols-3 lg:gap-3 md:grid-cols-2 md:gap-2 sm:gap-3">
+  @for( matchs of domestic(); track matchs ){ @for( match of matchs.matches;
+  track match ){
+  <div class="score-card">
+    <div class="series-title-holder">
+      <div class="series-title ellipsis">{{ matchs.seriesName }}</div>
+      <div class="match-type">{{ match.matchInfo.matchFormat }}</div>
+    </div>
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team1?.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team1Score?.inngs1?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs1?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs1?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs1?.overs }})</span>
+      </div>
+      } @if(match.matchScore?.team1Score?.inngs2?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs2?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs2?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs2?.overs }})</span>
+      </div>
+      }
+    </div>
+
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team2.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team2Score?.inngs1?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs1?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs1?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs1?.overs }})</span>
+        </div>
+        } @if(match.matchScore?.team2Score?.inngs2?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs2?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs2?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs2?.overs }})</span>
+        </div>
+        }
+    </div>
+    <!-- <span>Start Time</span
+    ><span>{{ match.matchInfo.startDate | date : "fullDate" }}</span>-->
+    <div class="match-status">{{ match.matchInfo.status }}</div>
+  </div>
+  } }
+</div>
+}
+@if(this.matchType()=='league' || this.matchType()=='all'){
+<div class="grid lg:grid-cols-3 lg:gap-3 md:grid-cols-2 md:gap-2 sm:gap-3">
+  @for( matchs of league(); track matchs ){ @for( match of matchs.matches; track
+  match ){
+  <div class="score-card">
+    <div class="series-title-holder">
+      <div class="series-title ellipsis">{{ matchs.seriesName }}</div>
+      <div class="match-type">{{ match.matchInfo.matchFormat }}</div>
+    </div>
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team1?.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team1Score?.inngs1?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs1?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs1?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs1?.overs }})</span>
+      </div>
+      } @if(match.matchScore?.team1Score?.inngs2?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs2?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs2?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs2?.overs }})</span>
+      </div>
+      }
+    </div>
+
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team2.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team2Score?.inngs1?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs1?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs1?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs1?.overs }})</span>
+        </div>
+        } @if(match.matchScore?.team2Score?.inngs2?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs2?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs2?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs2?.overs }})</span>
+        </div>
+        }
+    </div>
+    <!-- <span>Start Time</span
+    ><span>{{ match.matchInfo.startDate | date : "fullDate" }}</span>-->
+    <div class="match-status">{{ match.matchInfo.status }}</div>
+  </div>
+  } }
+</div>
+}
+
+@if(this.matchType()=='women' || this.matchType()=='all'){
+
+<div class="grid lg:grid-cols-3 lg:gap-3 md:grid-cols-2 md:gap-2 sm:gap-3">
+  @for( matchs of women (); track matchs ){ @for( match of matchs.matches; track
+  match ){
+  <div class="score-card">
+    <div class="series-title-holder">
+      <div class="series-title ellipsis">{{ matchs.seriesName }}</div>
+      <div class="match-type">{{ match.matchInfo.matchFormat }}</div>
+    </div>
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team1?.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team1Score?.inngs1?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs1?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs1?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs1?.overs }})</span>
+      </div>
+      } @if(match.matchScore?.team1Score?.inngs2?.runs){
+      <div class="score-item">
+        <span>{{ match.matchScore?.team1Score?.inngs2?.runs }}</span>
+        <span> - </span>
+        <span>{{ match.matchScore?.team1Score?.inngs2?.wickets }}</span>
+        <span>({{ match.matchScore?.team1Score?.inngs2?.overs }})</span>
+      </div>
+      }
+    </div>
+
+    <div class="team-name">
+      <div class="name ellipsis">
+        <span>{{ match.matchInfo?.team2.teamName }}</span>
+      </div>
+      @if(match.matchScore?.team2Score?.inngs1?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs1?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs1?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs1?.overs }})</span>
+        </div>
+        } @if(match.matchScore?.team2Score?.inngs2?.runs){
+        <div class="score-item">
+          <span>{{ match.matchScore?.team2Score?.inngs2?.runs }}</span>
+          <span> - </span>
+          <span>{{ match.matchScore?.team2Score?.inngs2?.wickets }}</span>
+          <span>({{ match.matchScore?.team2Score?.inngs2?.overs }})</span>
+        </div>
+        }
+    </div>
+    <!-- <span>Start Time</span
+    ><span>{{ match.matchInfo.startDate | date : "fullDate" }}</span>-->
+    <div class="match-status">{{ match.matchInfo.status }}</div>
+  </div>
+  } }
+</div>
+}
+</div>

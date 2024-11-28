@@ -3,12 +3,14 @@
     <div class="header-container">
         <div class="menu-icon" (click)="onHeaderItemClick($event)"><mat-icon>reorder-rounded</mat-icon></div>
         <div class="header-title"><span> <img src="../../assets/logo.png" 
-            ></span><span>Angular 19 Experiments</span></div>
+            ></span><span [ngClass]="{'mobile-header':this.responsiveService.isMobile()}">Angular 19 Experiments</span></div>
     </div>
     <div class="header-right-container">
         <div class="email-holder">
             <span><mat-icon>mail_outline</mat-icon></span>
+            @if(!this.responsiveService.isMobile()){
             <span class="email">pankajyourjha&#64;gmail.com</span>
+            }
         </div>
          <div class="avtar-holder">
             <img src="../../assets/avtar.jpg"  

@@ -327,10 +327,29 @@ export class LineChartsComponent implements OnInit {
   ]
 };
 
-  ngOnInit() {
+  async ngOnInit() {
     if (typeof window !== 'undefined') {
       this.isBrowser.set(true); // Ensure it's only initialized in the browser
     }
+
+    const url = 'https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': 'bb62312e08msh0acefac3f1947d3p1a21a7jsn1448bca7c2d5',
+		'x-rapidapi-host': 'cricbuzz-cricket.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+   
+    
   }
 
 }

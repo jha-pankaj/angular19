@@ -1,0 +1,79 @@
+.score-card {
+  box-shadow: 0 0.5rem 1rem #2c33491a;
+  background-color: #fff;
+  min-height: 140px;
+  padding: 10px 10px 20px 20px;
+  margin: 10px; 
+
+  .series-title-holder {
+    display: flex;
+    padding-top: 10px;
+     align-items: center;
+    .series-title {
+      width: calc(100% - 30px);
+      font-weight: 600;
+
+      font-size: 0.8rem;
+      color: cadetblue;
+    }
+    .match-type {
+      background: #a5d694;
+      padding: 5px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      font-size: 0.5rem;
+      min-width: 30px;
+      text-align: center;
+      font-weight: 800;
+      box-shadow: 0 0.5rem 1rem #2c33491a;
+    }
+  }
+  .match-status{
+    font-size: .8rem;
+    font-weight: 600;
+    color:blueviolet;
+  }
+
+  .team-name {
+    color: #7b8079;
+    display: flex;
+    font-size: .8rem;
+    padding: 2px;
+    justify-content: space-between;
+    font-weight: 600;
+    .name{
+      width:40%
+    }
+    
+  }
+}
+.btn-highlight{
+  box-shadow: 0 0.5rem 1rem #2c33491a;
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 0;
+}
+.mat-mdc-tab-c{
+  min-height: 50px;
+  
+}
+.crick-header{
+  position: fixed;
+  display: flex
+;
+  /* padding-right: 48px; */
+  background: #fff;
+  /* width: calc(100% - 56px); */
+  /* margin-left: -44px; */
+  /* left: 255px; */
+  padding: 0;
+  /* margin: 10px; */
+  width: 100%;
+  /* margin-left: -12px; */
+  margin-top: -12px;
+}
+.crick-cards{
+  margin-top: 81px;
+  margin-left: -10px;
+}
+

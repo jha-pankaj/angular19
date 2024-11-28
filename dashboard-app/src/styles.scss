@@ -39,3 +39,9 @@ html body {
  .scrollable::-webkit-scrollbar-track {
     background: #f7f9fc;
 }
+.ellipsis {
+    white-space: nowrap;       /* Prevent text from wrapping */
+    overflow: hidden;          /* Hide the overflowing text */
+    text-overflow: ellipsis;   /* Add the ellipsis (...) */
+                /* Set a fixed width */
+  }
