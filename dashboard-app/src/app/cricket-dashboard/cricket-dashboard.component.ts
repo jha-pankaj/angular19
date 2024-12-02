@@ -104,6 +104,7 @@ export class CricketDashboardComponent {
     console.log('Tab clicked:', event.index, event.tab.textLabel);
     this.#type.set(event.tab.textLabel.toLowerCase());
     this.#matchType.set('international');
+    this.loadMatchList(this.#type()).then(() => console.log(`MatchList loaded loaded:`));
     
   }
 
