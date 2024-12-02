@@ -23,7 +23,7 @@
           align-items: center;
           width: auto;
           padding: 1.25rem;
-          width: 50%;
+          width: 60%;
           justify-content: space-between;
           .header-title{
             font-weight: 600px;
@@ -34,6 +34,12 @@
                   height: 2rem;
                 }
           }
+          .icon-holder{
+            display: flex;
+            align-items: center;
+            .move{
+              padding-right: 10px;
+            }
           .menu-icon{
             color:#444;
             transform: scale(1.5);
@@ -44,6 +50,7 @@
               border-radius: 2px;;
             }
           }
+        }
       
       }
      
@@ -51,7 +58,7 @@
         align-items: center;
         width: auto;
        
-        width: 50%;
+        width: 40%;
         display: flex
     ;
         justify-content: end;
@@ -77,5 +84,20 @@
   }
   .mobile-header{
     font-size: .9rem;
+  }
+  .home-btn-holder{
+
+    width: 30px;
+    display: flex;
+    position: fixed;
+    right: 0;
+    /* padding: 10px; */
+    margin: 10px;
+    /* border: 1px solid; */
+    color: #005cbb;
+    transform: scale(1.5);
+    cursor: pointer;
+
+    
   }
 }

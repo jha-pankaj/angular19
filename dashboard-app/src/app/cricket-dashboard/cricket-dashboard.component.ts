@@ -89,11 +89,9 @@ export class CricketDashboardComponent {
 
 
   constructor() {
-   this.loadMatchList(this.#type()).then(() => console.log(`MatchList loaded loaded:`));
+  this.loadMatchList(this.#type()).then(() => console.log(`MatchList loaded loaded:`));
     effect(() => {
-      console.log(`international: `, this.international())
-      console.log(`international: `, this.domestic())
-    })
+       })
     this.#matchType.set('international');
 
   }
@@ -106,14 +104,13 @@ export class CricketDashboardComponent {
     console.log('Tab clicked:', event.index, event.tab.textLabel);
     this.#type.set(event.tab.textLabel.toLowerCase());
     this.#matchType.set('international');
-    this.loadMatchList(this.#type())
-
+    
   }
 
   async loadMatchList(type:string) {
     try {
       const matchList = await this.matchListService.loadMatchLists(type);
-   //   this.#courses.set(courses.sort(sortCoursesBySeqNo));
+     //this.#courses.set(courses.sort(sortCoursesBySeqNo));
        this.#matches.set(matchList);
         console.log(matchList)
     }

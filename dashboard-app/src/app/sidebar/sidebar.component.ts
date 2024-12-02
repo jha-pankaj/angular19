@@ -20,10 +20,10 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
     trigger('fade', [
       transition(':enter', [
         style({ transform: 'translateY(-5%)' }),
-        animate('100ms ease-out', style({ transform: 'translateY(0)' }))
+        animate('200ms ease-out', style({ transform: 'translateY(0)' }))
       ]),
       transition(':leave', [
-        animate('100ms ease-in', style({ transform: 'translateY(-5%)' }))
+        animate('200ms ease-in', style({ transform: 'translateY(-5%)' }))
       ])
     ])
   ]

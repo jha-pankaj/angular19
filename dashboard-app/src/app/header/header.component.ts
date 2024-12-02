@@ -8,6 +8,7 @@ import { Component, inject, output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ResponsiveService } from '../services/responsive.service';
+import { RoutescontrolService } from '../services/routescontrol.service';
 
 
 @Component({
@@ -19,8 +20,14 @@ import { ResponsiveService } from '../services/responsive.service';
 export class HeaderComponent {
   onHeaderItemClicked = output<string>();
   responsiveService= inject(ResponsiveService) ;
+  routescontrolService=inject(RoutescontrolService);
 
-  onHeaderItemClick(ev:Event){
-    this.onHeaderItemClicked.emit('menu')
+  onHeaderItemClick(ev:string){
+    if(ev==='menu'){
+    this.onHeaderItemClicked.emit(ev);
+    }else if (ev==='home'){
+      this.routescontrolService.navigateTo('home')
+
+    }
   }
 }

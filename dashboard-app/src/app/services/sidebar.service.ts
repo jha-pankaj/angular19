@@ -8,7 +8,7 @@ export class SidebarService {
 
   constructor() { }
 
-   loadMenuItems(){
+   loadMenuItems():MenuItem[]{
     return [
       {
         title: "Cricket",
@@ -27,6 +27,11 @@ export class SidebarService {
         expanded: 1,
         subMenu:[
           {
+            title: "Lines",
+            icons: '',
+            expanded: 0,
+          },
+          {
             title: "Pi chart",
             icons: '',
             expanded: 0,
@@ -41,11 +46,7 @@ export class SidebarService {
             icons: '',
             expanded: 0,
           },
-          {
-            title: "Lines",
-            icons: '',
-            expanded: 0,
-          },
+         
           {
             title: "Graph",
             icons: '',

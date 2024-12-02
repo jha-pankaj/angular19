@@ -13,23 +13,7 @@ import { Component, OnInit } from '@angular/core';
   imports: [CommonModule,MatCardModule, MatSidenavModule,MatSelectModule,MatListModule,MatToolbarModule]
 })
 export class Home implements OnInit {
-  cards = [
-    { title: 'Card 1', content: 'This is content for Card 1' },
-    { title: 'Card 2', content: 'This is content for Card 2' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-        { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' },
-    { title: 'Card 3', content: 'This is content for Card 3' }
-  ];
-
-  constructor() {}
+   constructor() {}
 
   ngOnInit(): void {}
 }

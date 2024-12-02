@@ -1,7 +1,14 @@
 <div class="header-main fixed">
  <nav>
     <div class="header-container">
-        <div class="menu-icon" (click)="onHeaderItemClick($event)"><mat-icon>reorder-rounded</mat-icon></div>
+        <div class="icon-holder" >
+            <div class="menu-icon move" (click)="onHeaderItemClick('menu')">
+                <mat-icon>reorder-rounded</mat-icon>
+            </div>
+            <div class="menu-icon" (click)="onHeaderItemClick('home')"><mat-icon>home</mat-icon></div>            
+       
+        </div>
+       
         <div class="header-title"><span> <img src="./../../assets/logo.png" 
             ></span><span [ngClass]="{'mobile-header':this.responsiveService.isMobile()}">Angular 19 Experiments</span></div>
     </div>
@@ -30,5 +37,7 @@
               </mat-menu>
         </div>
     </div>
+    
  </nav>
+ 
 </div>

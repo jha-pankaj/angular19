@@ -7,7 +7,7 @@
       <div class="menu-sidebar"  [ngClass]="{'menu-fixed': responsiveService.isMobile()}">
         <div class="sidebar-main">
           <div class="menu-scroll scrollable">
-            <app-sidebar></app-sidebar>
+            <app-sidebar (onItemClicked)="onItemSideMenuClicked($event)"></app-sidebar>
           </div>
         </div>
       </div>
