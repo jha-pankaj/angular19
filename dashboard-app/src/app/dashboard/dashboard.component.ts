@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit {
 
      }
      onItemSideMenuClicked(item:string){
+      this.menuOpen.set(false);
       if(item.toLowerCase()==='updates'){
       this.routescontrolService.navigateTo('cricket')
       }else if(item.toLowerCase()==='lines'){
