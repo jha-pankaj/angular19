@@ -15,7 +15,8 @@
     <ul class="menu-items" @fade>
       @for( sumItem of item.subMenu; track sumItem ){
       <li class="menu-item sub-menu">
-        <a (click)="itemClick(sumItem)">{{ sumItem.title }}</a>
+        <a (click)="itemClick(sumItem)" [ngClass]="{'is-active': sumItem.active}" >
+          {{ sumItem.title }}</a>
       </li>
       }
     </ul>

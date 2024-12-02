@@ -19,6 +19,9 @@ export class SidebarService {
             title: "Updates",
             icons: '',
             expanded: 0,
+            active:true
+
+
           }]
         },
       {
@@ -30,11 +33,13 @@ export class SidebarService {
             title: "Lines",
             icons: '',
             expanded: 0,
+            active:true
           },
           {
             title: "Pi chart",
             icons: '',
             expanded: 0,
+            active:false
           },
           {
             title: "Bar charts chart",

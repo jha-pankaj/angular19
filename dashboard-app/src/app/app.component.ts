@@ -2,12 +2,13 @@ import { APP_INITIALIZER, Component, Inject, inject, OnInit, signal } from '@ang
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AuthService } from './services/auth.service';
+import { LoadingIndicatorComponent } from './loading/loading.component';
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule,RouterOutlet],
+  imports: [CommonModule,RouterOutlet,LoadingIndicatorComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   providers:[]
