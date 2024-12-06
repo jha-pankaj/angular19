@@ -1,7 +1,7 @@
 
-# Project Title
+# Responsive dashboard using Angular 19
 
-Responsive dashboard using angualr 19
+
 
 
 ## About Project
