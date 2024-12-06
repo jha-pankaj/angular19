@@ -1,5 +1,5 @@
 
-# Responsive dashboard using angualr 19
+# Responsive dashboard using Angular 19
 
 
 
