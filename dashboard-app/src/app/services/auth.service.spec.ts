@@ -13,4 +13,13 @@ describe('AuthService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it('isLogin should be false' ,()=>{
+    console.log("isLogin",service.isLogin)
+      expect(service.isLogin).toBeFalse();
+  })
+  it('isLogin should be true' ,()=>{
+    service.login("pankaj","test@test.com");
+    expect(service.isLogin).toBe(true);
+    expect(service.isLoginAuthenticated()).toBe(true)
+  })
 });

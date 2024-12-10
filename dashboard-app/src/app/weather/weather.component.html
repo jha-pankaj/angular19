@@ -1,0 +1,81 @@
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+  <div>
+    <app-custom-autocomplete
+      [options]="countries"
+      (onSelected)="onCountrySelected($event)"
+      [SelectedItem]=""
+      [placeHolder]="'Country'"
+    >
+    </app-custom-autocomplete>
+  </div>
+
+  <div>
+    <app-custom-autocomplete
+      [options]="states"
+      (onSelected)="onStateSelected($event)"
+      [SelectedItem]=""
+      [placeHolder]="'State'"
+    >
+    </app-custom-autocomplete>
+  </div>
+  <div>
+    <app-custom-autocomplete
+      [options]="cities"
+      (onSelected)="onCitySelected($event)"
+      [SelectedItem]=""
+      [placeHolder]="'City'"
+    >
+    </app-custom-autocomplete>
+  </div>
+</div>
+
+<div class="container flex px-4 columns-3 m-2 sm:columns-1 space-x-2">
+  @if(weatherRepo){
+  <div>
+
+    <div class="max-w-sm rounded overflow-hidden shadow bg-sky-700">
+      <div class="px-6 py-1">
+        <!--<div class="font-bold text-xl mb-2">{{weatherRepo?.weather[0]?.description}}  </div>-->
+        <p class="text-sm decoration-white whiteColor">
+          <span>Temparatue :</span>
+          {{ this.kelvinToFahrenheit(weatherRepo?.main?.temp).toFixed(2) }}°C
+        </p>
+        <p class="text-sm decoration-white whiteColor">
+          <span>Temparatue Min :</span>
+          {{ this.kelvinToFahrenheit(weatherRepo?.main?.temp_min).toFixed(2) }}°C
+        </p>
+        <p class="text-sm decoration-white whiteColor">
+          <span>Temparatue Max :</span>
+          {{ this.kelvinToFahrenheit(weatherRepo?.main?.temp_max).toFixed(2) }}°C
+        </p>
+        </div>
+    </div>
+  </div>
+
+  <div>
+
+    <div class="max-w-sm rounded overflow-hidden shadow bg-sky-700">
+      <div class="px-6 py-1">
+        <p class="text-sm font-bold decoration-white whiteColor">
+         {{ (weatherRepo?.weather[0]?.description) }}
+        </p>
+        <p class="text-sm decoration-white whiteColor">
+          <span>Humidity :</span> {{ (weatherRepo?.main?.humidity).toFixed(2) }}%
+        </p>
+        <p class="text-sm decoration-white whiteColor">
+          <span>Wind Speed :</span>
+          {{ (weatherRepo?.wind?.speed).toFixed(2) }}km/h
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  }
+</div>
+
+@if(weatherRepo){
+<div class="grid lg:grid-cols-1 lg:gap-3 shadow bg-white sm:gap-1 pd">
+  <div echarts [options]="chartOption" class="chart"></div>
+</div>
+}

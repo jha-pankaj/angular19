@@ -35,6 +35,8 @@ export class DashboardComponent implements OnInit {
       this.routescontrolService.navigateTo('cricket')
       }else if(item.toLowerCase()==='lines'){
         this.routescontrolService.navigateTo('lines')
+      }else if(item.toLowerCase()==='weather forecast'){
+        this.routescontrolService.navigateTo('weather')
       }else{
         this.routescontrolService.navigateTo('undev')
       }

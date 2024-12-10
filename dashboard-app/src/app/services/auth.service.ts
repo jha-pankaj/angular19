@@ -34,11 +34,12 @@ export class AuthService {
     
      if (isPlatformBrowser(this.platformId)) {
       const json = localStorage.getItem(USER_KEY);
+      console.log("json",json)
       if (json) {
         const user = JSON.parse(json);
         this.isLogin =true;
         this.#userSignal.set(user);
-        console.log(" this.isLogin true")
+        console.log(" this.isLogin true",this.isLogin)
       }
     }
   }

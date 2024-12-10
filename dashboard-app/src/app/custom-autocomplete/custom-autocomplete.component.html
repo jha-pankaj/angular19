@@ -1,0 +1,25 @@
+<div>
+    <div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>{{placeHolder()}}</mat-label>
+          <input #itemInput
+            matInput
+            aria-label="State"
+            [matAutocomplete]="auto"
+            [formControl]="optionCtrl"
+            (input)="filter($event)"
+             (focus)="filter($event)"
+          />
+          <mat-autocomplete requireSelection #auto="matAutocomplete">
+            @for (option of filteredOptions; track option) {
+            <mat-option [value]="option.name" (onSelectionChange)="itemInput.value !=undefined && onEnter($event,option)">
+               <span>{{ option.name }}</span> 
+             </mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+    </div>
+  </div>
+  

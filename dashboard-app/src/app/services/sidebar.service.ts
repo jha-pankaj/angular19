@@ -24,6 +24,20 @@ export class SidebarService {
 
           }]
         },
+        {
+          title: "Weather",
+          icons: '',
+          expanded: 1,
+          subMenu:[
+            {
+              title: "Weather Forecast",
+              icons: '',
+              expanded: 0,
+              active:true
+  
+  
+            }]
+          },
       {
         title: "Charts",
         icons: '',

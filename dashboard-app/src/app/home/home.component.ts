@@ -5,12 +5,13 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Component, OnInit } from '@angular/core';
+import { PaymentComponent } from '../payment/payment.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  imports: [CommonModule,MatCardModule, MatSidenavModule,MatSelectModule,MatListModule,MatToolbarModule]
+  imports: [CommonModule,MatCardModule, MatSidenavModule,MatSelectModule,MatListModule,MatToolbarModule,PaymentComponent]
 })
 export class Home implements OnInit {
    constructor() {}

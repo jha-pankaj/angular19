@@ -5,6 +5,7 @@ import { CricketDashboardComponent } from '../cricket-dashboard/cricket-dashboar
 import { authGuard } from '../guards/auth.guard';
 import { UnderdevelopmentComponent } from '../underdevelopment/underdevelopment.component';
 import { Home } from '../home/home.component';
+import { WeatherComponent } from '../weather/weather.component';
 export const dashboardRoutes: Routes = [
     {
       path: '',
@@ -20,6 +21,12 @@ export const dashboardRoutes: Routes = [
           path: '', //login
           title: 'Home',
           component: Home,
+          canActivate: [authGuard],
+        },
+        {
+          path: 'weather', //login
+          title: 'weather',
+          component: WeatherComponent,
           canActivate: [authGuard],
         },
         {
